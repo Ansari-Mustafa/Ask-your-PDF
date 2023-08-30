@@ -1,0 +1,14 @@
+#Following function is to center an image using streamlit
+def center_img(img_url):
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        st.write(' ')
+    with col2:
+        st.image(img_url)
+    with col3:
+        st.write(' ')
+
+#Use this for Hugging Model instead of OpenAI
+llm = HuggingFaceHub(repo_id="google/flan-t5.xxl", model_kwargs={"temperature":0.5, "max_length":512})
+
+#
